@@ -1,2 +1,2 @@
-# DECO3800-BRJ
+# INFS3202-BRJ
 repo for site code
