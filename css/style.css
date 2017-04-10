@@ -1,5 +1,6 @@
 body {
 	background-color:#4A7AA8;
+	height:500px; /* change this */
 }
 
 
@@ -12,25 +13,46 @@ header {
 	background-color:#7C0CE8;
 }
 
-nav ~ #login {
-	float:right;
-	padding:5px;	
-}
-
-nav ~ #logo {
-	float:left;
-}
-
 nav {
-	
+	text-align:center;
+	margin:auto;
 }
+nav > p {
+	margin-top:0px;
+	padding-left:50px;
+	width:100%;
+}
+#login {
+	float:right;
+	padding-right:10px;	
+}
+#logo {
+	float:left;
+	padding-left:10px;
+}
+
+
+
 
 
 article {
+	float:left;
+	width:50%;
+	height:100%;
 	font-family:Calibri;
+	
+}
+#news {
+}
+#content {
 }
 
 
+footer {
+	text-align:center;
+	display:block;
+	margin-bottom:0px;
+}
 
 p {
 	font-family:Arial black;
