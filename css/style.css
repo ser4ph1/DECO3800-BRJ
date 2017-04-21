@@ -1,18 +1,35 @@
 html {
     position: relative;
-    min-height: 100%;
+    /*min-height: 100%;*/
+	background:#fff;
+	/*border:15px solid #000;*/
 }
 body {
 	background-color:#4A7AA8;
-	/*height:100%; change this */
+	/*height:100%;*/
 	margin: 0 auto 100px;
-	width:750px;
+	width:800px;
 	font-family:Arial black;
 	padding:25px;
 	padding-top:0px;
+	overflow:auto;
+	/*border:15px solid #000;*/
 
 }
 
+@media only screen and (max-width: 800px) {
+	body {
+		background-color:#4A7AA8;
+		/*height:100%;*/
+		margin: 0 auto 100px;
+		width:400px;
+		font-family:Arial black;
+		padding:25px;
+		padding-top:0px;
+		overflow:auto;
+		/*border:15px solid #000;*/
+	}
+}
 
 header {
 	/*
@@ -25,24 +42,27 @@ header {
 	
 	top:0px;
 	
-	height:100px;
-	width:100%;
 	height:150px;
 	background-color:#999;
 	margin:auto;
+
 
 	padding:0px;
 	overflow:hidden;
 }
 nav {
+	background-color:#999;
+	width:100%;
 	text-align:center;
 	margin:auto;
-	margin-top:1px;
+	margin-top:0px;
 	margin-bottom:50px;
 }
 nav > p {
+	
 	margin-top:0px;
-	width:100%;
+	padding:0px;
+	/*width:100%;*/
 }
 #login {
 	float:right;
@@ -62,28 +82,46 @@ nav > p {
 
 article {
 	background-color:#4A7AA8;
-	float:left;
+	/*float:left;*/
 	width:49%;
 	height:100%;
 	font-family:Calibri;
 	
 	
 }
+
+@media only screen and (max-width: 800px) {
+	article {
+		background-color:#4A7AA8;
+		/*float:left;*/
+		width:100%;
+		height:100%;
+		font-family:Calibri;
+		
+		
+	}
+}
+
 #content {
 	padding-left:5px;
 	max-height:9000px;
-	overflow:auto
+	overflow:auto;
+	display:inline;
+	
 }
 #content p {
 	padding:5px;
 }
 #news {
-	border:1px solid #000;
-	max-height:1000px;
+	border-right:1px solid #000;
+	border-bottom:1px solid #000;
+	max-height:400px;
+	float:left;
 
 }
 #news p {
 	padding:5px;
+	
 }
 #recommended {
 	height:500px;
@@ -114,12 +152,15 @@ addresss {
 
 form {
 	text-align:right;
-	margin-top:-17px;
+	margin-top:0px;
 	margin-right:-10px;
 }
 form p {
+	margin:0px;
 	line-height:0px;
+	padding-top:0px;
 }
+
 #contact_form {
 	margin:auto;
 	padding-top:50px;
@@ -134,6 +175,8 @@ fieldset {
 
 p {
 	font-family:Arial black;
+}
+a {
 }
 .clearfix {
 	overflow:auto;
