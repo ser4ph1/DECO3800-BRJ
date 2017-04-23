@@ -115,6 +115,7 @@ article {
 #news {
 	border-right:1px solid #000;
 	border-bottom:1px solid #000;
+	margin-right:10px;
 	max-height:400px;
 	float:left;
 
@@ -136,9 +137,11 @@ footer {
 	height:10px;
 	width:100%;
 	
-	padding:50px;
+	
 	text-align:center;
 	font-family:Calibri;
+	padding-top:50px;
+	padding-bottom:50px;
 	
 	overflow:hidden;
 			
