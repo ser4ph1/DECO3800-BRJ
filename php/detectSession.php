@@ -1,8 +1,13 @@
 <?php
 session_start();
+header("Content-Type: text/plain");
+$success = true;
 if (isset($_SESSION['username'])) {
-  echo 'Session is active';
+	$success = true;
+	//echo json_encode(["success" => $success]);
 }else{
-	echo 'Session is not active or my code is broken';
+	$success = false;
+	//echo json_encode(["success" => $success]);
 }
+echo json_encode($success);
 ?>

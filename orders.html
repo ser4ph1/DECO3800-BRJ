@@ -19,11 +19,13 @@
 		<header>
 			<nav>
 				<form id="login" action="login.html">
-					<input type="submit" value="login"/>
+					<input type="submit" id="loginButton" style="display:none;" value="Login"/>
 				</form>
 				<form id="createUser" action="createUser.html">
-					<input type="submit" value="Create User"/>
+					<input type="submit" id="createUserButton" style="display:none;" value="Create User"/>
 				</form>
+				
+				<button id="logout" style="display:none;">Logout</button>
 			
 				<p id="logo">I am a logo</p>
 			</nav>
@@ -71,9 +73,30 @@
 				<a href="nowhereinparticular....." >nowherein</a>
 			</address>
 		</footer>
-		
-		
-		
+		<script type="application/javascript">
+		$(document).ready(function(){
+			$.post("php/detectSession.php", function (r) {
+				//alert(r);
+				if (r=="true") {
+					$("#logout").show();
+					$("#loginButton").hide();
+					$("#createUser").hide();
+					//alert("Show Yourslef!");
+				} else {
+					//alert("I have failed!");
+					$("#logout").hide();
+					$("#loginButton").show();
+					$("#createUserButton").show();
+				}
+			});
+		})
+		$("#logout").click(function(e){
+			$.post("php/logout.php", function (r) {
+				alert("You have been logged out");
+				window.location = "index.html";
+			})
+		});
+		</script>
 	</body>
 	
 </html>

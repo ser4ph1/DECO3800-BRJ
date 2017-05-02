@@ -6,11 +6,6 @@
 		<meta charset="utf-8">
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-		<script>
-			$( function() {
-			$( "#tabs" ).tabs();
-		} );
-	</script>
 	</head>
 	
 	<body>
@@ -18,8 +13,8 @@
 
 		<header>
 			<nav>
-				<form id="login">
-					<button href="login.html">Login</button>
+				<form id="login" action="login.html">
+					<input type="submit" id="loginButton" value="Login"/>
 				</form>
 			
 				<p id="logo">I am a logo</p>
@@ -48,9 +43,6 @@
         <input type="submit" class="btn">
     </form>
 		
-		<div id="tabs">
-
-		</div>
 	
 		<footer>
 			<address>
@@ -61,9 +53,22 @@
 				<a href="nowhereinparticular....." >nowherein</a>
 			</address>
 		</footer>
-		
-		
-		
+		<script type="application/javascript">
+    $("#login-form").submit(function(e){
+        // Stop the form from submitting so we can do it via AJAX
+        e.preventDefault();
+
+        $.post('php/register.php', $('#login-form').serialize(), function (r) {
+            if (r.success == true) {
+                alert("User Created");
+                window.location = "index.html";
+            } else {
+                alert("User Creation Failed");
+				//window.location = "index.html";
+            }
+        })
+    });
+</script>
 	</body>
 	
 </html>
