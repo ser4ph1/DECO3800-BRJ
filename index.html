@@ -4,6 +4,10 @@
 		<title>The Crooked page</title>
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
+		<script src="js/jquery.min.js" type="application/javascript"></script>
+		<script src="js/index.js" type="application/javascript"></script>
+		<script type="application/javascript">
+		</script>
 	</head>
 	
 	<body >
@@ -11,12 +15,14 @@
 	
 		<header>
 			<nav>
-				<form id="login">
-					<p><input type="text" name="name" value="name    " size="20"></input></p>
-					<p><input type="passsword" name="password" value="password" size="20"></input></p>
+				<form id="login" action="login.html">
+					<input type="submit" value="Login"/>
 					<p><input id="adaptive" type="button" name="adaptive" value="This is a mobile app"></input></p>
 					<p><input id="adaptive2" type="button" name="adaptive2" value="This is a web-platform"></input></p>
 
+				</form>
+				<form id="createUser" action="createUser.html">
+					<input type="submit" value="Create User"/>
 				</form>
 			
 				<p id="logo">I am a logo</p>
