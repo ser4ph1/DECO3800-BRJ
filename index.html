@@ -6,6 +6,10 @@
 		<meta charset="utf-8">
 		<script src="js/jquery.min.js" type="application/javascript"></script>
 		<script src="js/index.js" type="application/javascript"></script>
+		<script src="js/lightbox-plus-jquery.js" type="application/javascript"></script>
+		<script src="js/javascript_menu.js" type="application/javascript"></script>
+
+
 
 	</head>
 	
@@ -14,30 +18,32 @@
 	
 		<header>
 			<nav>
-				<form id="login" action="login.html">
-					<input type="submit" id="loginButton" style="display:none;" value="Login"/>
-					<p><input id="adaptive" type="button" name="adaptive" value="This is a mobile app"></input></p>
-					<p><input id="adaptive2" type="button" name="adaptive2" value="This is a web-platform"></input></p>
 
-				</form>
+			
 				<form id="createUser" action="createUser.html">
 					<input type="submit" id="createUserButton" style="display:none;" value="Create User"/>
 				</form>
 				<button id="logout" style="display:none;">Logout</button>
 			
 				<p id="logo">I am a logo</p>
+				
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
 			</nav>
 
 		</header>
 		
 
-		<nav id="button_bar">
-			<p>
+		<div class="menu">
+			<ul>
 				<a href="index.html" >Home</a>
 				<a href="orders.html" >Book Orders</a>
 				<a href="contact.html" >Contact Us</a>
-			</p>
-		</nav>		
+				<form id="login" action="login.html">
+					<input type="submit" id="loginButton" style="display:none;" value="Login"/>
+				</form>
+			</ul>
+		</div>		
 		
 		
 		
