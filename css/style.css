@@ -36,7 +36,7 @@ body {
 		width:320px;
 		text-align:center;
 		font-family:Calibri;
-		overflow:hidden;
+		overflow:auto;
 		
 		
 		
@@ -350,7 +350,7 @@ a {
  margin: 0 auto;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 620px) {
 	.hamburger {
 		display:none;
 	}
@@ -365,4 +365,5 @@ a {
 	}
 
 }
+
 	
