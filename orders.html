@@ -4,8 +4,11 @@
 		<title>The Crooked pagsadasdsadsasade</title>
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
+		<script src="js/jquery.min.js" type="application/javascript"></script>
+		<script src="js/javascript_menu.js" type="application/javascript"></script>
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 		<script>
 			$( function() {
 			$( "#tabs" ).tabs();
@@ -20,30 +23,35 @@
 			<nav>
 				<form id="login" action="login.html">
 					<input type="submit" id="loginButton" style="display:none;" value="Login"/>
+					
 				</form>
 				<form id="createUser" action="createUser.html">
 					<input type="submit" id="createUserButton" style="display:none;" value="Create User"/>
 				</form>
-				
 				<button id="logout" style="display:none;">Logout</button>
 			
 				<p id="logo">I am a logo</p>
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
 			</nav>
 
 		</header>
 
-		<nav id="button_bar">
-			<p>
+		<div class="menu" >
+			<ul>
 				<a href="index.html" >Home</a>
 				<a href="orders.html" >Book Orders</a>
 				<a href="contact.html" >Contact Us</a>
-			</p>
-		</nav>		
+				<form id="login" action="login.html">
+					<input type="submit" id="loginButton" style="display:none;" value="Login"/>
+				</form>
+			</ul>
+		</div>		
 		
 		
 		
 		<div id="tabs">
-			<ul>
+			<ul id="genres">
 				<li><a href="#action_adventure">Action and Adventure</a></li>
 				<li><a href="#horror">Horror</a></li>
 				<li><a href="#cooking">Cooking</a></li>

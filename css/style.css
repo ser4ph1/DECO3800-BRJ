@@ -44,7 +44,45 @@ body {
 	
 	
 }
- 
+
+h1 {
+	font-family:Alegreya, Arial Black;
+	font-size:2em;
+	
+}
+
+h2 {
+	font-family:Alegreya, Arial Black;
+	font-size:2em;
+	
+}
+
+h3 {
+	font-family:Alegreya, Arial Black;
+	font-size:2em;
+	
+}
+
+h4 {
+	font-family:Alegreya, Arial Black;
+	font-size:2em;
+	
+}
+
+label {
+	font-family:Alegreya, Arial Black;
+	font-weight:bold;
+
+}
+
+
+
+
+
+
+
+
+
 
 
 article {
@@ -206,6 +244,29 @@ footer {
 	overflow:hidden;
 			
 }
+@media only screen and (max-width: 620px) {
+	footer {
+		background:#875252;
+		position:absolute;
+		left:0;
+		bottom:0px;
+		height:10px;
+		width:320;
+		
+		
+		text-align:center;
+		font-family:Calibri;
+		padding-top:50px;
+		padding-bottom:50px;
+		
+		overflow:hidden;
+				
+	}
+}
+
+
+
+
 addresss {
 	margin-bottom:1px;
 }
@@ -230,14 +291,45 @@ form p {
 	height:100%;
 	width:75%;
 }
+#login-form {
+	margin:auto;
+	width:320px ;
 
+}
+.form-group {
+	margin-left:0px;
+	text-align:right;
+}
+#login-form input {
+	background:#fefefe;
+}
+@media only screen and (max-width: 620px) {
+	#login-form {
+	position:absolute;
+	left:0;
+	top:100px;
+	height:500px;
+	width:320px;
+	text-align:right;
+	padding-top:50px;
+	padding-bottom:50px;
+	
+	overflow:hidden;
+		
+	}
+	.form-group {
+		padding-left:-40px;
+		text-align:right;
+	}
+}
 fieldset {
 	border:5px solid;
 	height:100%;
 }
 
 p {
-	font-family:Arial black;
+	font-family:Helvetica Arial black;
+	font-size:1.5em;
 }
 
 a {
@@ -256,7 +348,50 @@ a {
 	display:inline;
 }
 
+#genres {
+	display:inline;
+	margin-left:0;
+}
+#genres li {
+	margin-left:0;
+}
+@media only screen and (max-width: 620px) {
+	#tabs {
+		display:block;
+		background-color:#FFFDFA;
+		/*float:left;*/
+		width:320px;
+		height:100%;
+		font-family:Calibri;
+		margin-left:-25px;
+		font-size:0.6em;
+	}
 
+	#tabs li {
+		background-color:#FFFDFA;
+		/*float:left;*/
+		width:320px;
+		height:100%;
+		font-family:Calibri;
+		margin-left:-25px;
+		display:inline;
+		padding:10px;
+	}
+
+	#genres {
+
+	}
+	#genres li {
+
+
+	}
+
+
+}
+
+
+
+/* --------------------------burger menu-------------------------- */
 
 .hamburger {
  background: none;

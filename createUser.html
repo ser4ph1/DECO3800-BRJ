@@ -6,6 +6,9 @@
 		<meta charset="utf-8">
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="js/jquery.min.js" type="application/javascript"></script>
+		<script src="js/javascript_menu.js" type="application/javascript"></script>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 	</head>
 	
 	<body>
@@ -14,34 +17,50 @@
 		<header>
 			<nav>
 				<form id="login" action="login.html">
-					<input type="submit" id="loginButton" value="Login"/>
+					<input type="submit" id="loginButton" style="display:none;" value="Login"/>
+					
 				</form>
+				<form id="createUser" action="createUser.html">
+					<input type="submit" id="createUserButton" style="display:none;" value="Create User"/>
+				</form>
+				<button id="logout" style="display:none;">Logout</button>
 			
 				<p id="logo">I am a logo</p>
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
 			</nav>
 
 		</header>
 
-		<nav id="button_bar">
-			<p>
+		<div class="menu" >
+			<ul>
 				<a href="index.html" >Home</a>
 				<a href="orders.html" >Book Orders</a>
 				<a href="contact.html" >Contact Us</a>
-			</p>
-		</nav>		
+				<form id="login" action="login.html">
+					<input type="submit" id="loginButton" style="display:none;" value="Login"/>
+				</form>
+			</ul>
+		</div>		
 		
-    <h1>CREATE USER FORM</h1>
-    <form id="login-form">
-        <div class="form-group">
-            <label for="usernamesignup">Username</label>
-            <input id="usernamesignup" class="form-control" type="text" name="usernamesignup">
-        </div>
-        <div class="form-group">
-            <label for="passwordsignup">Password</label>
-            <input id="passwordsignup" class="form-control" type="password" name="passwordsignup">
-        </div>
-        <input type="submit" class="btn">
-    </form>
+    <article id="content">
+		<form id="login-form">
+		<h1>CREATE USER FORM</h1>
+			<div class="form-group">
+				<label for="usernamesignup">Username</label>
+				<input id="usernamesignup" class="form-control" type="text" name="usernamesignup">
+			</div>
+			<div class="form-group">
+				<label for="passwordsignup">Password</label>
+				<input id="passwordsignup" class="form-control" type="password" name="passwordsignup">
+			</div>
+			<input type="submit" class="btn">
+		</form>
+	</article>
+	<div id="clearfix">
+	</div>
+	<article id="recommended">
+	</article>
 		
 	
 		<footer>
