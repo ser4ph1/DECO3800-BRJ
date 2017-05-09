@@ -363,6 +363,13 @@ a {
 #genres li {
 	margin-left:0;
 }
+#genres img {
+	display:none;
+}
+#genres h1 {
+	display:inline;
+	font-size:1em;
+}
 @media only screen and (max-width: 620px) {
 	#tabs {
 		display:block;
@@ -386,14 +393,17 @@ a {
 		padding:10px;
 	}
 
-	#genres {
-
+	#genres img {
+		display:inline;
 	}
 	#genres li {
 
 
 	}
-
+#genres h1 {
+	display:none;
+	font-size:1em;
+}
 
 }
 
