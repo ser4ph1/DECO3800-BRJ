@@ -44,18 +44,30 @@
 		</div>		
 		
     <article id="content">
-		<form id="login-form">
-		<h1>CREATE USER FORM</h1>
-			<div class="form-group">
-				<label for="usernamesignup">Username</label>
-				<input id="usernamesignup" class="form-control" type="text" name="usernamesignup">
-			</div>
-			<div class="form-group">
-				<label for="passwordsignup">Password</label>
-				<input id="passwordsignup" class="form-control" type="password" name="passwordsignup">
-			</div>
-			<input type="submit" class="btn">
-		</form>
+    <form id="login-form">
+		<h1>Create User Form</h1>
+        <div class="form-group">
+            <label for="usernamesignup">Username</label>
+            <input id="usernamesignup" class="form-control" type="text" name="usernamesignup">
+        </div>
+		<div class="form-group">
+            <label for="emailsignup">Email</label>
+            <input id="emailsignup" class="form-control" type="text" name="emailsignup">
+        </div>
+		<div class="form-group">
+            <label for="addressignup">Billing Address</label>
+            <input id="addressignup" class="form-control" type="text" name="addressignup">
+        </div>
+        <div class="form-group">
+            <label for="passwordsignup">Password</label>
+            <input id="passwordsignup" class="form-control" type="password" name="passwordsignup">
+        </div>
+		<div class="form-group">
+            <label for="passwordsignupconfirm">Confirm Password</label>
+            <input id="passwordsignupconfirm" class="form-control" type="password" name="passwordsignupconfirm">
+        </div>
+        <input type="submit" class="btn">
+    </form>
 	</article>
 	<div id="clearfix">
 	</div>
@@ -72,12 +84,13 @@
 				<a href="nowhereinparticular....." >nowherein</a>
 			</address>
 		</footer>
-		<script type="application/javascript">
+<script type="application/javascript">
     $("#login-form").submit(function(e){
         // Stop the form from submitting so we can do it via AJAX
         e.preventDefault();
 
         $.post('php/register.php', $('#login-form').serialize(), function (r) {
+			//alert(r.success);
             if (r.success == true) {
                 alert("User Created");
                 window.location = "index.html";

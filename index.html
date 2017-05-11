@@ -29,6 +29,7 @@
 				
 				<button class="hamburger">&#9776;</button>
 				<button class="cross">&#735;</button>
+				<p id="someText" style="display:none;"></p>
 			</nav>
 
 		</header>
@@ -85,13 +86,18 @@
 			$.post("php/detectSession.php", function (r) {
 				//alert(r);
 				if (r=="true") {
+					$.post("php/username.php", function(r){
+						$("#someText").text("User: "+r);
+					})
 					$("#logout").show();
+					$("#someText").show();
 					$("#loginButton").hide();
 					$("#createUser").hide();
 					//alert("Show Yourslef!");
 				} else {
 					//alert("I have failed!");
 					$("#logout").hide();
+					$("#someText").hide();
 					$("#loginButton").show();
 					$("#createUserButton").show();
 				}
