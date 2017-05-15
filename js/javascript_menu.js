@@ -3,7 +3,7 @@ $(document).ready (function() {
 
 
 
-		$( ".cross" ).hide();
+		$( ".hamburger" ).hide();
 		$( ".hamburger" ).click(function() {
 			$( ".menu" ).slideToggle( "slow", function() {
 				$( ".hamburger" ).hide();
