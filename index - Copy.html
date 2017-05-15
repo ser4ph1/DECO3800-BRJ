@@ -1,12 +1,14 @@
-<DOCTYPE! html>
+ <DOCTYPE! html>
 <html>
 	<head>
-		<title>Riley's Bookstore</title>
+		<title>The Crooked page</title>
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
 		<script src="js/jquery.min.js" type="application/javascript"></script>
 		<script src="js/javascript_menu.js" type="application/javascript"></script>
 		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+
+
 
 	</head>
 	
@@ -17,12 +19,14 @@
 		<header>
 			<nav>
 
+				
+
 			
 				<p id="logo"><img src="images/logo.png" width="80" height="70" ></p><!-- http://blog2.moebiusadventures.com/wp-content/uploads/2015/03/johnny-automatic-books-1.png -->
 				
 				<button class="hamburger">&#9776;</button>
 				<button class="cross">&#735;</button>
-				<p id="someText" style="display:none;"></p>
+				<p id="someText" style="display:block;"></p>
 			</nav>
 
 		</header>
@@ -36,6 +40,11 @@
 				<a id="createUser" href="createUser.html" >Create account</a>
 				<a id="login" href="login.html" >login</a>
 				<a id="logout" href="" >logout</a>
+
+				
+				
+
+
 			</ul>
 		</div>
 		
@@ -76,6 +85,7 @@
 		</footer>
 		<script type="application/javascript">
 		$(document).ready(function(){
+		$("#loginButton").show();
 			$.post("php/detectSession.php", function (r) {
 				//alert(r);
 				if (r=="true") {
@@ -84,13 +94,13 @@
 					})
 					$("#logout").show();
 					$("#someText").show();
-					$("#loginButton").hide();
-					$("#createUser").hide();
+					$("#loginButton").show();
+					$("#createUser").show();
 					//alert("Show Yourslef!");
 				} else {
 					//alert("I have failed!");
-					$("#logout").hide();
-					$("#someText").hide();
+					$("#logout").show();
+					$("#someText").show();
 					$("#loginButton").show();
 					$("#createUserButton").show();
 				}

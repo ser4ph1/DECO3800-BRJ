@@ -3,7 +3,7 @@ $(document).ready (function() {
 
 
 
-		$( ".cross" ).hide();
+		$( ".hamburger" ).hide();
 		$( ".hamburger" ).click(function() {
 			$( ".menu" ).slideToggle( "slow", function() {
 				$( ".hamburger" ).hide();
@@ -19,11 +19,11 @@ $(document).ready (function() {
 		});
 		
 	$(window).resize(function(){
-	if ($('#content').width() == 320 ) {
-		$( ".menu" ).hide();
-	}
+		if ($('#content').width() == 320 ) {
+			$( ".menu" ).hide();
+		}
 	
-});
+	});
 	
 	
 });	
