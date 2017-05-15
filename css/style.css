@@ -220,7 +220,7 @@ iframe {
 		width:320px;
 		height:100%;
 		font-family:Calibri;
-		margin-left:70px;
+		margin-left:-25px;
 }
 
 .bad {
@@ -590,7 +590,7 @@ a {
 }
 
 #incorrectText {
-	display:block;
+	display:none;
 	font-family:Alegreya, Arial Black;
 	color:red;
 	margin-top:50px;
