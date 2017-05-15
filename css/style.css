@@ -113,6 +113,36 @@ article {
 	
 }
 
+#content_contact {
+	padding-left:5px;
+	max-height:9000px;
+	overflow:auto;
+	display:block;
+	float:right;
+	
+}
+
+@media only screen and (max-width: 620px) {
+	#content_contact {
+		display:none;
+		padding-left:5px;
+		max-height:9000px;
+		overflow:auto;
+		display:block;
+		float:none;
+		margin-top:;
+		
+	}
+	#content_contact p {
+		display:none;
+		margin-left:-30px;
+		font-size:0.8em;
+		padding:5px;
+		width:320px;
+	}
+}
+
+
 #content p {
 	padding:5px;
 }
@@ -178,12 +208,7 @@ nav > p {
 	padding:0px;
 	/*width:100%;*/
 }
-#login {
-	float:right;
-	padding-right:10px;	
-	
-	
-}
+
 #logo {
 	margin-top:10px;
 	float:left;
@@ -412,7 +437,7 @@ a {
 /* --------------------------burger menu-------------------------- */
 
 .hamburger {
- background: none;
+ background: #8f5f5f;
  position: absolute;
  top: 0;
  right: 0;
@@ -456,6 +481,13 @@ a {
 }
 
 .menu ul {
+ margin: 0;
+ padding: 0;
+ list-style-type: none;
+ list-style-image: none;
+}
+
+#logout {
  margin: 0;
  padding: 0;
  list-style-type: none;
@@ -520,3 +552,8 @@ a {
 }
 
 	
+#createUserButton, #logout, #login {
+	text-align:center;
+	
+}
+

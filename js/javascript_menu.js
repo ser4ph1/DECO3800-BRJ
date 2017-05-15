@@ -19,11 +19,11 @@ $(document).ready (function() {
 		});
 		
 	$(window).resize(function(){
-	if ($('#content').width() == 320 ) {
-		$( ".menu" ).hide();
-	}
+		if ($('#content').width() == 320 ) {
+			$( ".menu" ).hide();
+		}
 	
-});
+	});
 	
 	
 });	
