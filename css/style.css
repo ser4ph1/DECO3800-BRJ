@@ -220,10 +220,13 @@ iframe {
 		width:320px;
 		height:100%;
 		font-family:Calibri;
-		margin-left:-25px;
+		margin-left:70px;
 }
 
-
+.bad {
+	background:red;
+	display:none;
+}
 
 .menu {
 	background:#875252;
@@ -586,3 +589,9 @@ a {
 	
 }
 
+#incorrectText {
+	display:block;
+	font-family:Alegreya, Arial Black;
+	color:red;
+	margin-top:50px;
+}
