@@ -357,11 +357,19 @@ form p {
 	width:320px ;
 
 }
+#create-form {
+	margin:auto;
+	width:320px ;
+
+}
 .form-group {
 	margin-left:0px;
 	text-align:right;
 }
 #login-form input {
+	background:#fefefe;
+}
+#create-form input {
 	background:#fefefe;
 }
 @media only screen and (max-width: 620px) {
@@ -374,9 +382,18 @@ form p {
 	text-align:right;
 	padding-top:50px;
 	padding-bottom:50px;
-	
-	overflow:hidden;
-		
+	overflow:hidden;	
+	}
+	#create-form {
+	position:absolute;
+	left:0;
+	top:100px;
+	height:500px;
+	width:320px;
+	text-align:right;
+	padding-top:50px;
+	padding-bottom:50px;
+	overflow:hidden;	
 	}
 	.form-group {
 		padding-left:-40px;

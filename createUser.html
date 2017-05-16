@@ -37,7 +37,7 @@
 		</div>		
 		
     <article id="content">
-    <form id="login-form">
+    <form id="create-form">
 		<h1>Create User Form</h1>
         <div class="form-group">
             <label for="usernamesignup">Username</label>
@@ -77,23 +77,25 @@
 				<a href="nowhereinparticular....." >nowherein</a>
 			</address>
 		</footer>
-<script type="application/javascript">
-    $("#login-form").submit(function(e){
-        // Stop the form from submitting so we can do it via AJAX
-        e.preventDefault();
+		<!--
+		<script type="application/javascript">
+			$("#login-form").submit(function(e){
+				// Stop the form from submitting so we can do it via AJAX
+				e.preventDefault();
 
-        $.post('php/register.php', $('#login-form').serialize(), function (r) {
-			//alert(r.success);
-            if (r.success == true) {
-                alert("User Created");
-                window.location = "index.html";
-            } else {
-                alert("User Creation Failed");
-				//window.location = "index.html";
-            }
-        })
-    });
-</script>
+				$.post('php/register.php', $('#login-form').serialize(), function (r) {
+					//alert(r.success);
+					if (r.success == true) {
+						alert("User Created");
+						window.location = "index.html";
+					} else {
+						alert("User Creation Failed");
+						//window.location = "index.html";
+					}
+				})
+			});
+		</script>
+		-->
 	</body>
 	
 </html>

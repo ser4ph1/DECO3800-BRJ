@@ -68,24 +68,26 @@
 			</address>
 		</footer>
 		<script src="js/jquery.min.js" type="application/javascript"></script>
-<script type="application/javascript">
+		<!--
+		<script type="application/javascript">
 
-    $("#login-form").submit(function(e){
-        // Stop the form from submitting so we can do it via AJAX
-        e.preventDefault();
-		
-        $.post('php/login.php', $('#login-form').serialize(), function (r) {
-            if (r.authority == true) {
-                alert("Logged In");
-                window.location = "index.html";
-            } else {
-				$("#incorrectText").show();
-                //alert("Failed Log In");
-				//window.location = "index.html";
-            }
-        })
-    });
-</script>
+			$("#login-form").submit(function(e){
+				// Stop the form from submitting so we can do it via AJAX
+				e.preventDefault();
+				
+				$.post('php/login.php', $('#login-form').serialize(), function (r) {
+					if (r.authority == true) {
+						alert("Logged In");
+						window.location = "index.html";
+					} else {
+						$("#incorrectText").show();
+						//alert("Failed Log In");
+						//window.location = "index.html";
+					}
+				})
+			});
+		</script>
+		-->
 	</body>
 	
 </html>

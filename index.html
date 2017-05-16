@@ -4,6 +4,8 @@
 		<title>Riley's Bookstore</title>
 		<link rel="stylesheet" href="css/style.css">
 		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script src="js/jquery.min.js" type="application/javascript"></script>
 		<script src="js/javascript_menu.js" type="application/javascript"></script>
 		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
@@ -11,7 +13,7 @@
 	</head>
 	
 	
-	<body >
+	<body>
 
 	
 		<header>
@@ -31,7 +33,7 @@
 		<div class="menu" >
 			<ul>
 				<a href="index.html" >Home</a>
-				<a href="orders.html" >Book Orders</a>
+				<a class="orders" href="" >Book Orders</a>
 				<a href="contact.html" >Contact Us</a>
 				<a id="createUser" href="createUser.html" >Create account</a>
 				<a id="login" href="login.html" >login</a>
@@ -74,8 +76,10 @@
 				<a href="nowhereinparticular....." >nowherein</a>
 			</address>
 		</footer>
+		<!--
 		<script type="application/javascript">
 		$(document).ready(function(){
+
 			$.post("php/detectSession.php", function (r) {
 				//alert(r);
 				if (r=="true") {
@@ -93,6 +97,9 @@
 					$("#someText").hide();
 					$("#loginButton").show();
 					$("#createUserButton").show();
+					$(".orders").click(function(){
+						window.location.href='orders.html';
+					});
 				}
 			});
 		})
@@ -103,6 +110,7 @@
 			})
 		});
 		</script>
+		-->
 	</body>
 	
 </html>
