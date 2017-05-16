@@ -35,6 +35,9 @@ $(document).ready (function() {
 					$("#loginButton").hide();
 					$("#createUser").hide();
 					//alert("Show Yourslef!");
+					$(".orders").click(function(){
+						window.location.href='orders.html';
+					});
 				} else {
 					//alert("I have failed!");
 					$("#someText").hide();
@@ -42,7 +45,7 @@ $(document).ready (function() {
 					$("#loginButton").show();
 					$("#createUserButton").show();
 					$(".orders").click(function(){
-						window.location.href='orders.html';
+						window.location.href='login.html';
 					});
 				}
 								
