@@ -23,6 +23,17 @@ $(document).ready (function() {
 		}
 	
 	});
+
+$(".orders").click(function(e){
+	$.post("php/detectSession.php", function (r) {
+		alert(r);
+		if (r=="true") {
+			window.location.href='orders.html';
+		}else{
+			window.location.href='login.html';
+		}
+	})
+});
 	
 			$.post("php/detectSession.php", function (r) {
 				//alert(r);
@@ -32,21 +43,16 @@ $(document).ready (function() {
 					})
 					$("#someText").show();
 					$("#logout").show();
-					$("#loginButton").hide();
+					$("#login").hide();
 					$("#createUser").hide();
 					//alert("Show Yourslef!");
-					$(".orders").click(function(){
-						window.location.href='orders.html';
-					});
+
 				} else {
 					//alert("I have failed!");
 					$("#someText").hide();
 					$("#logout").hide();
-					$("#loginButton").show();
-					$("#createUserButton").show();
-					$(".orders").click(function(){
-						window.location.href='login.html';
-					});
+					$("#login").show();
+					$("#createUser").show();
 				}
 								
 			});	

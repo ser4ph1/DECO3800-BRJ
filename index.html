@@ -33,7 +33,7 @@
 		<div class="menu" >
 			<ul>
 				<a href="index.html" >Home</a>
-				<a class="orders" href="" >Book Orders</a>
+				<a class="orders">Book Orders</a>
 				<a href="contact.html" >Contact Us</a>
 				<a id="createUser" href="createUser.html" >Create account</a>
 				<a id="login" href="login.html" >login</a>
@@ -76,41 +76,6 @@
 				<a href="nowhereinparticular....." >nowherein</a>
 			</address>
 		</footer>
-		<!--
-		<script type="application/javascript">
-		$(document).ready(function(){
-
-			$.post("php/detectSession.php", function (r) {
-				//alert(r);
-				if (r=="true") {
-					$.post("php/username.php", function(r){
-						$("#someText").text("User: "+r);
-					})
-					$("#logout").show();
-					$("#someText").show();
-					$("#loginButton").hide();
-					$("#createUser").hide();
-					//alert("Show Yourslef!");
-				} else {
-					//alert("I have failed!");
-					$("#logout").hide();
-					$("#someText").hide();
-					$("#loginButton").show();
-					$("#createUserButton").show();
-					$(".orders").click(function(){
-						window.location.href='orders.html';
-					});
-				}
-			});
-		})
-		$("#logout").click(function(e){
-			$.post("php/logout.php", function (r) {
-				alert("You have been logged out");
-				window.location = "index.html";
-			})
-		});
-		</script>
-		-->
 	</body>
 	
 </html>
