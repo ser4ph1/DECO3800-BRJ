@@ -623,5 +623,28 @@ a {
 	display:none;
 	font-family:Alegreya, Arial Black;
 	color:red;
-	margin-top:50px;
+	margin-top:10px;
+	font-size: 100%;
+}
+
+#nullFields {
+	display:none;
+	font-family:Alegreya, Arial Black;
+	color:red;
+	margin-top:10px;
+	font-size: 100%;
+}
+#invalidPassword {
+	display:none;
+	font-family:Alegreya, Arial Black;
+	color:red;
+	margin-top:10px;
+	font-size: 100%;
+}
+#duplicateUsernameOrEmail {
+	display:none;
+	font-family:Alegreya, Arial Black;
+	color:red;
+	margin-top:10px;
+	font-size: 100%;
 }

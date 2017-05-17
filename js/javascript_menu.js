@@ -80,18 +80,29 @@ $(".orders").click(function(e){
         })
     });
 	
-	$("#create-form").submit(function(e){
+	
+	    $("#create-form").submit(function(e){
         // Stop the form from submitting so we can do it via AJAX
         e.preventDefault();
 
         $.post('php/register.php', $('#create-form').serialize(), function (r) {
 			//alert(r.success);
+			$("#nullFields").hide();
+			$("#invalidPassword").hide();
+			$("#duplicateUsernameOrEmail").hide();
             if (r.success == true) {
                 alert("User Created");
                 window.location = "index.html";
             } else {
-                alert("User Creation Failed");
-				//window.location = "index.html";
+				if(r.nullFields == true){
+					$("#nullFields").show();
+				}
+				if(r.passwordConfirm == true){
+					$("#invalidPassword").show();
+				}
+				if(r.duplicateIndentifier == true){
+					$("#duplicateUsernameOrEmail").show();
+				}
             }
         })
     });

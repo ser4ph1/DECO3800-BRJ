@@ -9,14 +9,19 @@
 	$passwordconfirm =  $mysqli->real_escape_string($_POST["passwordsignupconfirm"]);
 	$validRegistration = true;
 	$success = false;
+	$nullFieldsError = false;
+	$passwordConfirmError = false;
+	$duplicateIndentifier = false;
 	if($password!=$passwordconfirm){
 		$validRegistration = false;
 		$success = false;
+		$passwordConfirmError=true;
 	}
-	if($username == "" || $password == "" || $email == "" || $address == "")
+	if($username == "" || $password == "" || $email == "" || $address == "" || $passwordconfirm=="")
 	{
 		$validRegistration = false;
 		$success = false;
+		$nullFieldsError = true;
 	}
 	$query = "SELECT COUNT(*) FROM USERS2 WHERE USERNAME= ?";
 	$stmt = $mysqli->prepare($query);
@@ -30,6 +35,7 @@
 		// throw non unique username
 		$validRegistration = false;
 		$success = false;
+		$duplicateIndentifier = true;
 	}
 	$query = "SELECT COUNT(*) FROM USERS2 WHERE EMAIL= ?";
 	$stmt = $mysqli->prepare($query);
@@ -42,6 +48,7 @@
 	{
 		$validRegistration = false;
 		$success = false;
+		$duplicateIndentifier = true;
 	}
 		
 	//account is actually registerable case
@@ -56,7 +63,7 @@
 		$stmt->execute();
 		$stmt->close();
 	}
-	$Response = array('success' => $success);
+	$Response = array('success' => $success, 'nullFields' => $nullFieldsError, 'passwordConfirm' => $passwordConfirmError, 'duplicateIndentifier' => $duplicateIndentifier);
 	echo json_encode($Response);
 	$mysqli->close();
 ?>
