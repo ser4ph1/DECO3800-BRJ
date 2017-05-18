@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>INFS3202 Demo App</title>
+</head>
+<body>
+<div>
+    <h1>Login</h1>
+    <form id="login-form">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" class="form-control" type="text" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" class="form-control" type="password" name="password">
+        </div>
+        <input type="submit" class="btn">
+    </form>
+	<a href="create_user.html">Create User</a>
+	<button id="active">Session</button>
+</div>
+<script src="js/jquery.min.js" type="application/javascript"></script>
+<script type="application/javascript">
+    $("#login-form").submit(function(e){
+        // Stop the form from submitting so we can do it via AJAX
+        e.preventDefault();
+		
+        $.post('backend/login.php', $('#login-form').serialize(), function (r) {
+            if (r.authority == true) {
+                alert("Logged In");
+                window.location = "example.html";
+            } else {
+                alert("Failed Log In");
+				//window.location = "index.html";
+            }
+        })
+    });
+	
+	$("#active").click(function (e) {
+		$.post("backend/detectSession.php", function (r) {
+        alert(r);
+		});
+	});
+</script>
+</body>
+</html>

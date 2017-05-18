@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Riley's Bookstore</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta charset="utf-8">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="js/jquery.min.js" type="application/javascript"></script>
+		<script src="js/javascript_menu.js" type="application/javascript"></script>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+	</head>
+	
+	<body>
+
+
+		<header>
+			<nav>
+
+			
+				<p id="logo"><img src="images/logo.png" width="80" height="70" ></p><!-- http://blog2.moebiusadventures.com/wp-content/uploads/2015/03/johnny-automatic-books-1.png -->
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
+			</nav>
+
+		</header>
+
+		<div class="menu" >
+			<ul>
+				<a href="index.html" >Home</a>
+				<a class="orders">Book Orders</a>
+				<a href="contact.html" >Contact Us</a>
+				<a id="createUser" href="createUser.html" >Create account</a>
+				<a id="login" href="login.html" >login</a>
+				<a id="logout" href="" >logout</a>
+				<div id="someText" style="display:none;"></div>
+			</ul>
+		</div>		
+		
+		<article id="content">
+			<form id="login-form">
+			<h1>Login</h1>
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input id="username" class="form-control" type="text" name="username">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input id="password" class="form-control" type="password" name="password">
+				</div>
+				<input type="submit" class="btn">
+				<p id="incorrectText">Incorrect Password</p>
+			</form>
+		</article>
+		<div id="clearfix">
+		</div>
+		<article id="recommended">
+		</article>
+		
+
+	
+		<footer>
+			<address>
+				<a href="nowhereinparticular....." >nowherein</a>
+				<a href="nowhereinparticular....." >nowherein</a>
+				Copyright, Jonas the person@nowhereinparticular
+				<a href="nowhereinparticular....." >nowherein</a>
+				<a href="nowhereinparticular....." >nowherein</a>
+			</address>
+		</footer>
+		<script src="js/jquery.min.js" type="application/javascript"></script>
+		<!--
+		<script type="application/javascript">
+
+			$("#login-form").submit(function(e){
+				// Stop the form from submitting so we can do it via AJAX
+				e.preventDefault();
+				
+				$.post('php/login.php', $('#login-form').serialize(), function (r) {
+					if (r.authority == true) {
+						alert("Logged In");
+						window.location = "index.html";
+					} else {
+						$("#incorrectText").show();
+						//alert("Failed Log In");
+						//window.location = "index.html";
+					}
+				})
+			});
+		</script>
+		-->
+	</body>
+	
+</html>

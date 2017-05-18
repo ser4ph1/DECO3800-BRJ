@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Crooked page</title>
+		<link rel="stylesheet" href="css/style.css">
+		<meta charset="utf-8">
+		<script src="js/jquery.min.js" type="application/javascript"></script>
+		<script src="js/javascript_menu.js" type="application/javascript"></script>
+		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+
+
+
+	</head>
+	
+	
+	<body >
+
+	
+		<header>
+			<nav>
+
+				
+
+			
+				<p id="logo"><img src="images/logo.png" width="80" height="70" ></p><!-- http://blog2.moebiusadventures.com/wp-content/uploads/2015/03/johnny-automatic-books-1.png -->
+				
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
+				<p id="someText" style="display:block;"></p>
+			</nav>
+
+		</header>
+		
+
+		<div class="menu" >
+			<ul>
+				<a href="index.html" >Home</a>
+				<a href="orders.html" >Book Orders</a>
+				<a href="contact.html" >Contact Us</a>
+				<a id="createUser" href="createUser.html" >Create account</a>
+				<a id="login" href="login.html" >login</a>
+				<a id="logout" href="" >logout</a>
+
+				
+				
+
+
+			</ul>
+		</div>
+		
+		
+		<article id="news">
+			<p>test text is blurb yay I am also the news YaYaYaYA</p>
+		</article>
+	
+		<article id="content">
+			<p>"Swim away from me, do ye?" murmured Ahab, gazing over into the water. There seemed but little in the words, but the tone conveyed more of deep helpless sadness than the insane old man had ever before evinced. But turning to the steersman, who thus far had been holding the ship in the wind to diminish her headway, he cried out in his old lion voice,—"Up helm! Keep her off round the world!"</p>
+			
+			<p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'</p>
+			
+			<p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'</p>
+			
+			<p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'</p>
+			
+			<p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'</p>
+			
+			<p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?' something</p>
+
+			<p>Alice was beginning to get very tired of sitting by her sisdsdsdsdsdster on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, 'and what is the use of a book,' thought Alice 'without pictures or conversation?'</p>
+			
+		</article>
+		<div class="clearfix">
+		</div>
+		<article id="recommended">
+		</article>
+	
+		<footer>
+			<address>
+				<a href="nowhereinparticular....." >nowherein</a>
+				<a href="nowhereinparticular....." >nowherein</a>
+				Copyright, Jonas the person@nowhereinparticular
+				<a href="nowhereinparticular....." >nowherein</a>
+				<a href="nowhereinparticular....." >nowherein</a>
+			</address>
+		</footer>
+		<script type="application/javascript">
+		$(document).ready(function(){
+		$("#loginButton").show();
+			$.post("php/detectSession.php", function (r) {
+				//alert(r);
+				if (r=="true") {
+					$.post("php/username.php", function(r){
+						$("#someText").text("User: "+r);
+					})
+					$("#logout").show();
+					$("#someText").show();
+					$("#loginButton").show();
+					$("#createUser").show();
+					//alert("Show Yourslef!");
+				} else {
+					//alert("I have failed!");
+					$("#logout").show();
+					$("#someText").show();
+					$("#loginButton").show();
+					$("#createUserButton").show();
+				}
+			});
+		})
+		$("#logout").click(function(e){
+			$.post("php/logout.php", function (r) {
+				alert("You have been logged out");
+				window.location = "index.html";
+			})
+		});
+		</script>
+	</body>
+	
+</html>

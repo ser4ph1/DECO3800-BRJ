@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>INFS3202 Demo App</title>
+</head>
+<body>
+	<p>A page with some stuff on it</p>
+	<br>
+	<button id="logout">Logout</button>
+	<button id="go">Display Username</button>
+	<button id="active">Session</button>
+	<script src="js/jquery.min.js" type="application/javascript"></script>
+	<script type="application/javascript">
+		$("#go").click(function (e) {
+			$.post("backend/message.php", function (r) {
+            alert(r);
+			});
+		});
+		
+		$("#active").click(function (e) {
+			$.post("backend/detectSession.php", function (r) {
+            alert(r);
+			});
+		});
+		
+		$("#logout").click(function(e){
+			$.post("backend/logout.php", function (r) {
+				alert("You have been logged out");
+				window.location = "index.html";
+			})
+		});
+	</script>
+</body>
+</html>
