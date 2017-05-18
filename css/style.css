@@ -82,13 +82,13 @@ label {
 	cursor: pointer;
 }
 #login{
-	display:;
+	display:none;
 }
 #createUser{
-	display:;
+	display:none;
 }
 #logout{
-	display:;
+	display:none;
 }
 
 
