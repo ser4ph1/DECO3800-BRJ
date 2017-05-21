@@ -34,6 +34,7 @@ $(".orders").click(function(e){
 		}
 	})
 });
+
 	
 			$.post("php/detectSession.php", function (r) {
 				//alert(r);
@@ -106,9 +107,11 @@ $(".orders").click(function(e){
             }
         })
     });
-	
-	
-
 });	
+$("#searchForm").submit(function(e){
+    e.preventDefault();
+    $.post('php/search.php', $('#searchForm').serialize(), function (r) {
+		//r is the searched data
+    })
+});
 
-	
