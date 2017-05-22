@@ -23,6 +23,9 @@
 			echo "<th>".$row["author"]."</th>";
 			echo "<th>$".$row["price"]."</th>";
 			echo "<th>".$row["quantity"]."</th>";
+			echo "<th>";
+			echo "<button class='cookingClick' name='orderingForm' value='".$row["bookid"]."'>$".$row["price"]."</button>";
+			echo "</th>";
 			echo "</tr>";
 		}
 		$success = true;

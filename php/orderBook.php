@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	include("connect.php");
-	//header('Content-Type: application/json');
+	header('Content-Type: application/json');
 	$BookID = $_POST["BookID"];
 	$success = true;
 	//query
@@ -19,9 +19,7 @@
 		$stmt->execute();
 		$stmt->close();
 	}
-	//end query
-	header("Content-Type: text/plain");
-	//$Response = array('success' => $success,'quantity' => $QuantityOfBook,'book' => $BookID);
-	echo json_encode($success);
+	$Response = array('success' => $success,'BookID'=>$BookID);
+	echo json_encode($Response);
 	$mysqli->close();
 ?>
