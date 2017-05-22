@@ -1,10 +1,9 @@
 html {
     position: relative;
-    /*min-height: 100%;*/
-	
-	background-color:#fdfdf1; 
-	/*border:15px solid #000;*/
-	/* background-image:url("../images/paper2.jpg"); */ /* NOTE find better IMAGE */
+	height:100%;
+	min-height:900px;
+	background-color:#fdfdf1;
+	overflow-y:scroll;
 }
 body {
 	background-color:#FFFDFA; /* NOTE find better COLOUR */
@@ -15,9 +14,12 @@ body {
 	font-family:Arial black;
 	padding:25px;
 	padding-top:170px;
+	padding-bottom:;
 	overflow:auto;
 	/*border:15px solid #000;*/
 	box-shadow: 0px 0px 100px 100px #FFFDFA;
+	max-height:100%;
+	overflow:hidden;
 
 }
 @media only screen and (max-width: 620px) {
@@ -36,7 +38,8 @@ body {
 		width:320px;
 		text-align:center;
 		font-family:Calibri;
-		overflow:auto;
+		overflow:hidden;
+		
 		
 		
 		
@@ -117,7 +120,6 @@ article {
 }
 #content {
 	padding-left:5px;
-	max-height:9000px;
 	overflow:auto;
 	display:inline;
 	
@@ -174,18 +176,22 @@ article {
 }
 
 #news {
-	border-right:1px solid #000;
-	border-bottom:1px solid #000;
+
 	margin-right:10px;
-	max-height:400px;
+	height:400px;
+	padding:;
+	overflow:hidden;
 	float:left;
 
 }
 #news img {
-
+	margin:auto;
 }
 #news p {
-	padding:5px;
+	display:block;
+	margin:auto;
+	text-align:center;
+	padding-top:25px;
 	
 }
 #recommended {
@@ -235,6 +241,15 @@ nav > p {
 	float:left;
 	padding-left:10px;
 	
+}
+@media only screen and (max-width: 620px) {
+	#logo {
+		display:none;
+		margin-top:25px;
+		float:left;
+		padding-left:10px;
+		
+	}
 }
 iframe {
 		background-color:#FFFDFA;
@@ -314,7 +329,7 @@ footer {
 	background:#875252;
 	position:absolute;
 	left:0;
-	bottom:0px;
+	bottom:-50px;
 	height:10px;
 	width:100%;
 	
@@ -332,7 +347,7 @@ footer {
 		background:#875252;
 		position:absolute;
 		left:0;
-		bottom:0px;
+		bottom:-50px;
 		height:10px;
 		width:320;
 		
@@ -366,6 +381,23 @@ form p {
 	line-height:0px;
 	padding-top:0px;
 }
+#searchForm{
+	text-align:center;
+	margin:auto;
+	margin-top:0px;
+	margin-left:;
+	width:500px;
+}
+@media only screen and (max-width: 620px) {
+	#searchForm{
+		text-align:left;
+		margin:auto;
+		margin-top:0px;
+		margin-left:45px;
+		width:500px;
+	}
+}
+
 #contact_form {
 	/* NOTE needs ADAPTIVE */
 	margin:auto;
@@ -436,7 +468,11 @@ a {
 }
 
 .clearfix {
-	overflow:auto;
+	position:fixed;
+	display:block;
+	overflow:hidden;
+	clear:both;
+	height:100px;
 }
 
 #tabs {
@@ -504,6 +540,7 @@ a {
 /* --------------------------burger menu-------------------------- */
 
 .hamburger {
+ display:none;
  background: #8f5f5f;
  position: absolute;
  top: 0;
@@ -522,6 +559,7 @@ a {
 }
 
 .cross {
+ display:none;
  background: #8f5f5f;
  position: absolute;
  top: 0px;
@@ -684,7 +722,17 @@ a {
 }
 
 .content-img {
-	display:inline;
+	display:block;
 	float:left;
 	padding-right:15px;
 }
+
+.maincontent {
+	width:100%;
+	height:650px;
+	overflow-y:scroll;
+}
+body > ::-webkit-scrollbar { 
+    display: none; 
+}
+
