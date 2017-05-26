@@ -1,6 +1,5 @@
 html {
     position: relative;
-	height:100%;
 	min-height:900px;
 	background-color:#fdfdf1;
 	overflow-y:scroll;
@@ -8,7 +7,6 @@ html {
 @media only screen and (max-width: 620px) {
 	html {
     position: relative;
-	height:100%;
 	width:320px;
 	background-color:#fdfdf1;
 	overflow-y:scroll;
@@ -160,9 +158,14 @@ article {
 	padding-left:5px;
 	min-height:500px;
 	overflow:auto;
+	overflow-x:hidden;
 	display:block;
 	float:right;
 	
+}
+
+#content_contact p {
+	font-size:1rem;
 }
 
 @media only screen and (max-width: 620px) {
@@ -509,6 +512,8 @@ p {
 }
 
 a {
+	text-decoration:none;
+	
 }
 
 .clearfix {
@@ -792,4 +797,19 @@ body > ::-webkit-scrollbar {
 	.desktoptext {
 		display:none;
 	}
+}
+#contact {
+	position:relative;
+	margin-left:0px;
+	text-align:left;
+	border:none;
+	width:200px;
+	background:;
+	border:1px grey solid;
+}
+#send_email {
+	text-align:left;
+	width:100%;
+	background:lightgrey;
+	padding:10px;
 }

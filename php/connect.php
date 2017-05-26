@@ -1,3 +1,3 @@
 <?php
-$mysqli = new mysqli('localhost', 'root', 'secret', 'infs3202');
+$mysqli = new mysqli('localhost', 'root', '', 'infs3202');
 ?>

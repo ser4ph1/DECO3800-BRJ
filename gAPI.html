@@ -4,6 +4,8 @@
     <title>PlaceID Geocoder</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+	
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -48,9 +50,25 @@
         display: inline;
       }
 	  
+	  button{
+		position:relative;
+		margin-left:115px;
+		text-align:center;
+		background:#f1f1f1;
+		border:none;
+		height:50px;
+		padding-left:10px;
+		padding-right:10px;
+		font-family:Alegreya, Arial Black;
+		
+	  }
+	  
 
     </style>
+	
 	<script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
+	
+	
   </head>
   <body>
     <input id="pac-input" class="controls" type="text"
@@ -60,8 +78,11 @@
       <span id="place-name"  class="title"></span><br>
       Place ID <span id="place-id"></span><br>
       <span id="place-address"></span>
+	  
     </div>
-
+	<div>
+		<button id="contact-btn"><strong>Contact us!</strong></button>
+	</div>
     <script>
       // This sample uses the Place Autocomplete widget requesting only a place
       // ID to allow the user to search for and locate a place. The sample
@@ -197,6 +218,9 @@ function addYourLocationButton(map, marker)
           });
         });
       }
+	  
+
+	  	  
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsraJNVtvuloRA8DDI3KVhCDsDHi68UB8&libraries=places&callback=initMap"
         async defer></script>

@@ -92,4 +92,16 @@ $(document).ready (function() {
             }
         })
     });
+	
+	
+	
+	$("#contact-btn").click(function() {
+		$("#map").hide();
+	});
+	
+	
+	
+	
+	
+	
 });
