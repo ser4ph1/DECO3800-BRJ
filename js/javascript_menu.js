@@ -1,62 +1,4 @@
-$(function() {
-	$("#searchDisplay").dialog({
-	autoOpen: false,
-	buttons: {
-		OK: function() {$(this).dialog("close");}
-	},
-	title: "Search Results",
-	minWidth:600,
-	});
-});
 $(document).ready (function() {
-	$("#searchForm").submit(function(event){
-		// Stop the form from submitting so we can do it via AJAX
-		event.preventDefault();
-		$.post('php/search.php', $('#searchForm').serialize(), function (r) {
-			var divDisplay = document.getElementById('searchDisplay');
-			divDisplay.innerHTML = r;
-			$("#searchDisplay").dialog("open");
-		})
-	});
-});
-function reloadAdventureTable(r) {
-	document.getElementById("adventure").innerHTML = r;
-	$(".adventureClick").click(bookClick);
-}
-function reloadCookingTable(r) {
-	document.getElementById("cooking").innerHTML = r;
-	$(".cookingClick").click(bookClick);
-}
-function reloadComicTable(r) {
-	document.getElementById("comic").innerHTML = r;
-	$(".comicClick").click(bookClick);
-}
-function reloadRomanceTable(r) {
-	document.getElementById("romance").innerHTML = r;
-	$(".romanceClick").click(bookClick);
-}
-
-function bookClick(){
-	var orderingForm = $(this).attr('value');
-	$.post("php/orderBook.php",{BookID:orderingForm}, function(r){
-		if(r.success==true){
-			alert("book was ordered");
-			$.post("php/getAdventureBooks.php", reloadAdventureTable);
-			$.post("php/getComicBooks.php", reloadComicTable);
-			$.post("php/getCookingBooks.php", reloadCookingTable);
-			$.post("php/getRomanceBooks.php", reloadRomanceTable);
-		}else{
-			alert("book is out of stock");
-		}
-	});
-}
-
-$(document).ready (function() {
-	$.post("php/getAdventureBooks.php", reloadAdventureTable);
-	$.post("php/getComicBooks.php", reloadComicTable);
-	$.post("php/getCookingBooks.php", reloadCookingTable);
-	$.post("php/getRomanceBooks.php", reloadRomanceTable);
-
 	$( ".hamburger" ).hide();
 	$( ".hamburger" ).click(function() {
 		$( ".menu" ).slideToggle( "slow", function() {
@@ -88,7 +30,6 @@ $(document).ready (function() {
 			}
 		})
 	});
-
 
 	$.post("php/detectSession.php", function (r) {
 		if (r=="true") {
