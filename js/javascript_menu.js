@@ -29,27 +29,46 @@ function bookClick(){
 		}
 	});
 }
+$(function() {
+	$("#searchDisplay").dialog({
+	autoOpen: false,
+	buttons: {
+		OK: function() {$(this).dialog("close");}
+	},
+	title: "Search Results",
+	minWidth:600,
+	});
+});
+$("#searchForm").submit(function(e){
+	// Stop the form from submitting so we can do it via AJAX
+	e.preventDefault();
+	$.post('php/search.php', $('#searchForm').serialize(), function (r) {
+		var divDisplay = document.getElementById('searchDisplay');
+		divDisplay.innerHTML = r;
+		$("#searchDisplay").dialog("open");
+	})
+});
 $(document).ready (function() {
 	$.post("php/getAdventureBooks.php", reloadAdventureTable);
 	$.post("php/getComicBooks.php", reloadComicTable);
 	$.post("php/getCookingBooks.php", reloadCookingTable);
 	$.post("php/getRomanceBooks.php", reloadRomanceTable);
-	
-		$( ".hamburger" ).hide();
-		$( ".hamburger" ).click(function() {
-			$( ".menu" ).slideToggle( "slow", function() {
-				$( ".hamburger" ).hide();
-				$( ".cross" ).hide();//was shown
-			});
-		});
 
-		$( ".cross" ).click(function() {
-			$( ".menu" ).slideToggle( "slow", function() {
-				$( ".cross" ).hide();
-				$( ".hamburger" ).hide();//was shown
-			});
+	$( ".hamburger" ).hide();
+	$( ".hamburger" ).click(function() {
+		$( ".menu" ).slideToggle( "slow", function() {
+			$( ".hamburger" ).hide();
+			$( ".cross" ).hide();//was shown
 		});
-		
+	});
+
+	$( ".cross" ).click(function() {
+		$( ".menu" ).slideToggle( "slow", function() {
+			$( ".cross" ).hide();
+			$( ".hamburger" ).hide();//was shown
+		});
+	});
+	
 	$(window).resize(function(){
 		if ($('#content').width() == 320 ) {
 			$( ".menu" ).hide();
@@ -57,70 +76,59 @@ $(document).ready (function() {
 	
 	});
 
-$(".orders").click(function(e){
+	$(".orders").click(function(e){
+		$.post("php/detectSession.php", function (r) {
+			if (r=="true") {
+				window.location.href='orders.html';
+			}else{
+				window.location.href='login.html';
+			}
+		})
+	});
+
+
 	$.post("php/detectSession.php", function (r) {
-		alert(r);
 		if (r=="true") {
-			window.location.href='orders.html';
-		}else{
-			window.location.href='login.html';
-		}
-	})
-});
-
-	
-			$.post("php/detectSession.php", function (r) {
-				//alert(r);
-				if (r=="true") {
-					$.post("php/username.php", function(r){
-						$("#someText").text("User: "+r);
-					})
-					$("#someText").show();
-					$("#logout").show();
-					$("#login").hide();
-					$("#createUser").hide();
-					//alert("Show Yourslef!");
-
-				} else {
-					//alert("I have failed!");
-					$("#someText").hide();
-					$("#logout").hide();
-					$("#login").show();
-					$("#createUser").show();
-				}
-								
-			});	
-	
-		$("#logout").click(function(e){
-			$.post("php/logout.php", function (r) {
-				alert("You have been logged out");
-				window.location = "index.html";
+			$.post("php/username.php", function(r){
+				$("#someText").text("User: "+r);
 			})
-		});	
-		
-		$("#login-form").submit(function(e){
-        // Stop the form from submitting so we can do it via AJAX
-        e.preventDefault();
-		
-        $.post('php/login.php', $('#login-form').serialize(), function (r) {
-            if (r.authority == true) {
-                alert("Logged In");
-                window.location = "index.html";
-            } else {
+			$("#someText").show();
+			$("#logout").show();
+			$("#login").hide();
+			$("#createUser").hide();
+		} else {
+			$("#someText").hide();
+			$("#logout").hide();
+			$("#login").show();
+			$("#createUser").show();
+		}				
+	});	
+
+	$("#logout").click(function(e){
+		$.post("php/logout.php", function (r) {
+			alert("You have been logged out");
+			window.location = "index.html";
+		})
+	});	
+
+	$("#login-form").submit(function(e){
+		// Stop the form from submitting so we can do it via AJAX
+		e.preventDefault();
+
+		$.post('php/login.php', $('#login-form').serialize(), function (r) {
+			if (r.authority == true) {
+				alert("Logged In");
+				window.location = "index.html";
+			} else {
 				$("#incorrectText").show();
-                //alert("Failed Log In");
-				//window.location = "index.html";
-            }
-        })
-    });
-	
-	
+			}
+		})
+	});
 	    $("#create-form").submit(function(e){
         // Stop the form from submitting so we can do it via AJAX
         e.preventDefault();
 
         $.post('php/register.php', $('#create-form').serialize(), function (r) {
-			//alert(r.success);
 			$("#nullFields").hide();
 			$("#invalidPassword").hide();
 			$("#duplicateUsernameOrEmail").hide();
@@ -140,11 +148,4 @@ $(".orders").click(function(e){
             }
         })
     });
-});	
-$("#searchForm").submit(function(e){
-    e.preventDefault();
-    $.post('php/search.php', $('#searchForm').serialize(), function (r) {
-		//r is the searched data
-    })
 });
-

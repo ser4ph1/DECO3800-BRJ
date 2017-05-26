@@ -16,7 +16,12 @@ html {
 	
 }
 
-
+.ui-widget-header,.ui-state-default, ui-button {
+   background:#875252;
+   border: 1px solid black;
+   color: #FFFFFF;
+   font-weight: bold;
+}
 
 body {
 	display:fixed;
