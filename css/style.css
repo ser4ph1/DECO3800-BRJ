@@ -1,14 +1,14 @@
 html {
     position: relative;
-	min-height:900px;
 	background-color:#fdfdf1;
 	overflow-y:scroll;
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	html {
     position: relative;
 	width:320px;
 	background-color:#fdfdf1;
+	min-height:900px;
 	overflow-y:scroll;
 	}
 	
@@ -32,7 +32,7 @@ body {
 	overflow:hidden;
 
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	body {
 		background-color:#FFFDFA;
 		/*height:100%;*/
@@ -124,7 +124,7 @@ article {
 	
 	
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	article {
 		background-color:#FFFDFA;
 		/*float:left;*/
@@ -141,7 +141,7 @@ article {
 	display:inline;
 	
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#form_content {
 		background-color:#FFFDFA;
 		/*float:left;*/
@@ -168,7 +168,7 @@ article {
 	font-size:1rem;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#content_contact {
 		display:none;
 		padding-left:5px;
@@ -199,7 +199,7 @@ article {
 	padding:5px;
 	padding-right:20px;
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#content p {
 		margin-left:-30px;
 		font-size:0.8em;
@@ -250,7 +250,7 @@ header {
 	overflow:hidden;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 		header { width:320px; }
 }
 
@@ -275,7 +275,7 @@ nav > p {
 	padding-left:10px;
 	
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#logo {
 		display:none;
 		margin-top:25px;
@@ -324,7 +324,7 @@ iframe {
 		
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	.menu a {
 		background-color:f0f0f0;
 		border-radius:5px;
@@ -348,7 +348,7 @@ iframe {
 	font-size:1.7em;
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	.menu a:active {
 		background-color:000;
 		border:000;
@@ -375,7 +375,7 @@ footer {
 	overflow:hidden;
 			
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	footer {
 		background:#875252;
 		position:absolute;
@@ -389,8 +389,8 @@ footer {
 		font-family:Calibri;
 		padding-bottom:70px;
 		
-		overflow:hidden;
-		margin-bottom:;
+		overflow:;
+		margin-bottom:0px;
 				
 	}
 	
@@ -435,7 +435,7 @@ form p {
 	margin-left:;
 	width:500px;
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#searchForm{
 		text-align:left;
 		margin:auto;
@@ -473,7 +473,7 @@ form p {
 #create-form input {
 	background:#fefefe;
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#login-form {
 	position:absolute;
 	left:0;
@@ -562,7 +562,7 @@ a {
 	
 	
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#tabs {
 		display:block;
 		background-color:#FFFDFA;
@@ -717,7 +717,7 @@ a {
 	}
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	.menu {
 		width:320px;
 	}
@@ -772,7 +772,7 @@ a {
 	font-family:Alegreya, Arial Black;
 	
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	#someText {
 		display:inline;
 		background:;
@@ -796,7 +796,7 @@ a {
 	height:650px;
 	overflow-y:scroll;
 }
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	.maincontent {
 		width:100%;
 		height:650px;
@@ -808,7 +808,7 @@ body > ::-webkit-scrollbar {
     display: none; 
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width:420px) {
 	.desktoptext {
 		display:none;
 	}
@@ -871,6 +871,7 @@ body > ::-webkit-scrollbar {
 	border:none;
 	padding:5px;
 }
+
 tr th:first-of-type {
 	background:;
 }
@@ -894,3 +895,25 @@ table {
 	background:#fde398;
 	border:solid 15px #2089ca;
 }
+
+
+
+@media only screen and (max-width:420px) {
+
+
+	tr th:nth-of-type(3) {
+		display:none;
+	}
+	tr th:nth-of-type(4){
+		display:none;
+	}
+	tr th:nth-of-type(5) {
+		display:none;
+	}
+	tr th:nth-of-type(2) {
+		font-size:0.6rem;
+	}
+	
+}
+
+
