@@ -527,6 +527,7 @@ a {
 
 #tabs {
 	display:block;
+	margin-top:-0px;
 }
 
 #tabs li {
@@ -535,20 +536,31 @@ a {
 }
 
 #genres {
-	display:inline;
-	margin-left:0;
+	position:relative;
+	display:block;
+	text-align:center;
+	margin-left:0px;
+	padding-left:0px;
 	
 }
 #genres li {
-	margin-left:0;
-	background: linear-gradient(-90deg, #fefefe, #fde398, #fefefe);
 }
+
 #genres img {
 	display:none;
 }
 #genres h1 {
 	display:inline;
 	font-size:1em;
+	color:white;
+	background:#7E9E42;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:10px;
+	
+	
 }
 @media only screen and (max-width: 620px) {
 	#tabs {
@@ -631,7 +643,7 @@ a {
 
 
 .menu {
- z-index: 1000000;
+ z-index:;
  font-weight: bold;
  font-size: 0.8em;
  width: 100%;
@@ -642,8 +654,8 @@ a {
 }
 
 .menu ul {
- margin: 0;
- padding: 0;
+ margin: 0px;
+ padding: 0px;
  list-style-type: none;
  list-style-image: none;
 }
@@ -815,4 +827,70 @@ body > ::-webkit-scrollbar {
 	width:100%;
 	background:lightgrey;
 	padding:10px;
+}
+
+/*tabs */
+#adventure, #romance , #cooking, #comic {
+	width:100%;
+	margin-top:50px;
+	
+}
+
+#adventure {
+}
+#romance {
+	
+}
+#cooking {
+	
+}
+#comic {
+	
+}
+.adventureClick {
+	width:50px;
+	background:lightblue;
+	border:none;
+	padding:5px;
+}
+.romanceClick {
+	width:50px;
+	background:lightblue;
+	border:none;
+	padding:5px;
+}
+.comicClick {
+	width:50px;
+	background:lightblue;
+	border:none;
+	padding:5px;
+}
+.cookingClick {
+	width:50px;
+	background:lightblue;
+	border:none;
+	padding:5px;
+}
+tr th:first-of-type {
+	background:;
+}
+
+tr {
+	padding:2px;
+	background:;
+	margin:0px;
+}
+
+tr th {
+	text-align:left;
+}
+tr th:nth-of-type(2) {
+	font-size:1.4rem;
+}
+
+table {
+	margin:auto;
+	padding:50px;
+	background:#fde398;
+	border:solid 15px #2089ca;
 }
