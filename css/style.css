@@ -514,6 +514,7 @@ p {
 a {
 	text-decoration:none;
 	
+	
 }
 
 .clearfix {
@@ -536,9 +537,11 @@ a {
 #genres {
 	display:inline;
 	margin-left:0;
+	
 }
 #genres li {
 	margin-left:0;
+	background: linear-gradient(-90deg, #fefefe, #fde398, #fefefe);
 }
 #genres img {
 	display:none;
