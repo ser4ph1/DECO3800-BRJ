@@ -7,6 +7,7 @@
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script src="js/javascript_menu.js" type="application/javascript"></script>
+		<script src="js/emailBuilder.js" type="application/javascript"></script>
 		<script src="js/search.js" type="application/javascript"></script>
 		<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
 		<script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -57,12 +58,10 @@
 				<p>If you have any questions please send us an email using the form below. You can also contact us on social media, links are in the footer at the bottom of every page.</p>
 				
 				<form id="send_email">
-					<input placeholder="Your name (optional)" id="contact" type="name" name="email"></input><p></p>
-					<input placeholder="Email address (optional)" id="contact" type="email" name="email"></input>
-					
-					<textarea rows="10" cols="50">Your question or feedback here</textarea>
-
-					
+					<input placeholder="Your name (optional)" id="name" type="text" name="email"></input><p></p>
+					<input placeholder="Subject (optional)" id="subject" type="text" name="email"></input>
+					<textarea id="body" placeholder="Your question or feedback here" rows="10" cols="50"></textarea>
+					<input type="submit" class="btn" value="Open Email">
 				</form>
 				
 			</article>
